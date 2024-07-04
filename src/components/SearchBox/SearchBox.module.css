@@ -1,13 +1,9 @@
-.form {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 350px;
-    box-sizing: border-box;
+.text {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: 700;
 }
 
-.field {
-    width: 300px;
+.input {
+    width: 220px;
 }

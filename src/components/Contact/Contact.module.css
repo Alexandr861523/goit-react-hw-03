@@ -1,34 +1,14 @@
-.list {
+.container {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+    justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+
 }
 
-.list:last-child {
-    border-bottom: none;
-}
-
-.name {
-    font-weight: bold;
-}
-
-.number {
-    margin-left: 10px;
-    color: #555;
-}
-
-.button {
-    padding: 5px 10px;
-    color: white;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
+.btn {
     cursor: pointer;
-    transition: background-color 0.3s;
-}
+    height: 30px;
+    width: 60px;
 
-.button:hover {
-    background-color: #0056b3;
 }
