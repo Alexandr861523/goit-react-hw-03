@@ -1,23 +1,23 @@
-import PropTypes from "prop-types";
-import styles from "./Contact.module.css";
+import { MdPerson } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import css from '../../components/Contact/Contact.module.css';
 
-const Contact = ({ name, number, onDelete }) => {
-  console.log("Contact", name, number); // Debugging line
-  return (
-    <li className={styles.list}>
-      <span className={styles.name}>{name}</span>:
-      <span className={styles.number}>{number}</span>
-      <button onClick={onDelete} className={styles.button}>
-        Delete
-      </button>
-    </li>
-  );
-};
 
-Contact.propTypes = {
-  name: PropTypes.string.isRequired,
-  number: PropTypes.string.isRequired,
-  onDelete: PropTypes.func.isRequired,
-};
+const Contact = ({list, onDelete}) => {
+
+    return (
+        <div className={css.container}>
+            <div > 
+            <p><MdPerson />  {list.name}</p>
+        <p><FaPhoneAlt />  {list.number}</p>
+            </div>
+            
+        
+        <button className={css.btn} onClick={() => onDelete(list.id)}>Delete</button>
+        </div>
+        
+
+    )
+}
 
 export default Contact;
