@@ -1,27 +1,13 @@
 import { useState, useEffect } from 'react'
-// import { Formik, Form, Field } from 'formik';
-// import css from '../App/App.module.css';
 import initialDates from '../dates.json'
  import ContactList from '../../components/ContactList/ContactList';
  import ContactForm from '../ContactForm/ContactForm';
  import SearchBox from '../SearchBox/SearchBox';
  
-
-
-
-
-
 function App() {
-    // const [dates, setDates] = useState(initialDates);
-  
-  
     const [filter, setFilter] = useState('');
-
-    
-
     const [dates, setDates] = useState(() => {
-      
-      const savedDates = window.localStorage.getItem("contacts");
+    const savedDates = window.localStorage.getItem("contacts");
     
       if (savedDates !== null) {
         return JSON.parse(savedDates);
